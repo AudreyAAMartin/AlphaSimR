@@ -941,32 +941,32 @@ pedigreeCross = function(founderPop, id, mother, father, matchID=FALSE,
 #' randomly sampled from founderPop.
 #'
 #' @examples
- # Create founder haplotypes
- founderPop = quickHaplo(nInd=5, nChr=2, segSites=10)
-
- # Set simulation parameters
- SP = SimParam$new(founderPop)
-# \dontshow{SP$nThreads = 1L}
- SP$addTraitA(nQtlPerChr = 2L, name = 'TraitA')
- SP$addTraitA(nQtlPerChr = 3L, name = 'TraitB')
- # Create population
- pop = newPop(founderPop, simParam=SP)
-
- # Pedigree 
- #
- #test no recoding 
- #id = 2:11
- #mother = c(0,0,0,0,2,2,3,8,0,8)
- #father = c(0,0,0,0,4,4,5,6,7,7)
- #sex = c("M","M","F","F","F","F","M","F","F","M")
- 
- id = 1:10
- mother = c(0,0,0,0,1,1,2,7,0,7)
- father = c(0,0,0,0,3,3,4,5,6,6)
- sex = c("M","M","F","F","F","F","M","F","F","M")
- 
- 
- pop2 = pedigreeCross2(pop, id, mother, father, sex, use = 'gv', matchID = FALSE, sel_trait = 2, simParam=SP)
+#' # Create founder haplotypes
+#' founderPop = quickHaplo(nInd=5, nChr=2, segSites=10)
+#'
+#' # Set simulation parameters
+#' SP = SimParam$new(founderPop)
+#'# \dontshow{SP$nThreads = 1L}
+#' SP$addTraitA(nQtlPerChr = 2L, name = 'TraitA')
+#' SP$addTraitA(nQtlPerChr = 3L, name = 'TraitB')
+#' # Create population
+#' pop = newPop(founderPop, simParam=SP)
+#'
+#' # Pedigree 
+#' #
+#' #test no recoding 
+#' #id = 2:11
+#' #mother = c(0,0,0,0,2,2,3,8,0,8)
+#' #father = c(0,0,0,0,4,4,5,6,7,7)
+#' #sex = c("M","M","F","F","F","F","M","F","F","M")
+#' 
+#' id = 1:10
+#' mother = c(0,0,0,0,1,1,2,7,0,7)
+#' father = c(0,0,0,0,3,3,4,5,6,6)
+#' sex = c("M","M","F","F","F","F","M","F","F","M")
+#' 
+#' 
+#' pop2 = pedigreeCross2(pop, id, mother, father, sex, use = 'gv', matchID = FALSE, sel_trait = 2, simParam=SP)
 #'
 #'
 #' @export
